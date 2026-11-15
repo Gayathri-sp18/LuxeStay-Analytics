@@ -1,5 +1,8 @@
-# 🏨 LuxeStay Analytics
-### *Discovering the Story Behind Every Booking.*
+<h1 align="center">LuxeStay Analytics</h1>
+
+<p align="center">
+  <em>Discovering the Story Behind Every Booking</em>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-Data%20Analytics-blue?style=for-the-badge&logo=python&logoColor=white" />
