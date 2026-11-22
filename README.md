@@ -86,45 +86,54 @@ Additional features were created to support deeper analysis:
 
 A total of **12 visualizations** were created to explore different aspects of hotel booking data.
 
-### Visualization Gallery
+## ✦ Visualization Gallery
 
 <p align="center"><strong>01 — Monthly Booking Trends</strong></p>
 <p align="center"><img width="1287" height="558" alt="Monthly Booking Trends" src="https://github.com/user-attachments/assets/1ad2f13d-ceea-4a4c-b6c8-b16f13ecad12" />
-Hotel Type" /></p>
-
 
 <p align="center"><strong>02 — Booking Distribution by Hotel Type</strong></p>
-<p align="center"><img src="images/hotel_distribution.png" width="90%" alt="Booking Distribution by Hotel Type" /></p>
+<p align="center"><img width="765" height="677" alt="Booking Distribution by Hotel Type" src="https://github.com/user-attachments/assets/7f401f34-993f-4ae8-a40d-1078ea5e0135" />
+
+
 
 <p align="center"><strong>03 — Cancellation Rate by Hotel Type</strong></p>
-<p align="center"><img src="images/cancellation_hotel_type.png" width="90%" alt="Cancellation Rate by Hotel Type" /></p>
+<p align="center"><img width="748" height="537" alt="Bookings by Distribution Channel" src="https://github.com/user-attachments/assets/b2eb0d90-68d4-4fde-aef9-34f078c8ced6" />
+
 
 <p align="center"><strong>04 — Cancellation Rate by Market Segment</strong></p>
-<p align="center"><img src="images/cancellation_market_segment.png" width="90%" alt="Cancellation Rate by Market Segment" /></p>
+<p align="center"><img width="775" height="438" alt="Cancellation Rate by Market Segment" src="https://github.com/user-attachments/assets/f3396749-42cf-4184-9768-c3560f360776" />
+
 
 <p align="center"><strong>05 — Bookings by Distribution Channel</strong></p>
-<p align="center"><img src="images/distribution_channel_treemap.png" width="90%" alt="Bookings by Distribution Channel" /></p>
+<p align="center"><img width="748" height="537" alt="Bookings by Distribution Channel" src="https://github.com/user-attachments/assets/585d5110-3768-45be-90a9-732f69a80789" />
+
 
 <p align="center"><strong>06 — ADR Distribution</strong></p>
-<p align="center"><img src="images/adr_distribution.png" width="90%" alt="ADR Distribution" /></p>
+<p align="center"><img width="741" height="432" alt="ADR Distribution" src="https://github.com/user-attachments/assets/c9f9cf45-5ab1-4685-a3b9-987af76282fd" />
+
 
 <p align="center"><strong>07 — ADR Comparison by Hotel Type</strong></p>
-<p align="center"><img src="images/adr_hotel_comparison.png" width="90%" alt="ADR Comparison by Hotel Type" /></p>
+<p align="center"><img width="767" height="692" alt="ADR Comparison by Hotel Type" src="https://github.com/user-attachments/assets/4ba24034-c58e-4607-8cc5-af2e53e55679" />
+
 
 <p align="center"><strong>08 — Length of Stay Distribution</strong></p>
-<p align="center"><img src="images/length_of_stay.png" width="90%" alt="Length of Stay Distribution" /></p>
+<p align="center"><img width="773" height="607" alt="Length of Stay Distribution" src="https://github.com/user-attachments/assets/0cfc2da0-fc72-46f0-8807-b8eff608b065" />
+
 
 <p align="center"><strong>09 — Top 10 Countries by Booking Count</strong></p>
-<p align="center"><img src="images/top_countries.png" width="90%" alt="Top 10 Countries by Booking Count" /></p>
+<p align="center"><img width="987" height="600" alt="Top 10 Countries by Booking Count" src="https://github.com/user-attachments/assets/8e22ed39-7f03-4b50-92c3-f98a596bf2d7" />
 
 <p align="center"><strong>10 — Lead Time vs ADR</strong></p>
-<p align="center"><img src="images/lead_time_vs_adr.png" width="90%" alt="Lead Time vs ADR" /></p>
+<p align="center"><img width="766" height="421" alt="Lead Time vs ADR" src="https://github.com/user-attachments/assets/8811408b-f235-47cb-be37-e064d6e989b6" />
+
 
 <p align="center"><strong>11 — Customer Type Distribution by Hotel</strong></p>
-<p align="center"><img src="images/customer_type_distribution.png" width="90%" alt="Customer Type Distribution by Hotel" /></p>
+<p align="center"><img width="787" height="621" alt="Customer Type Distribution by Hotel" src="https://github.com/user-attachments/assets/41b178dc-cb2d-46d2-b07e-7716d36255e5" />
+
 
 <p align="center"><strong>12 — Correlation Analysis</strong></p>
-<p align="center"><img src="images/correlation_heatmap.png" width="90%" alt="Correlation Heatmap" /></p>
+<p align="center"><img width="771" height="570" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/5ea83f13-3b9d-4b88-8a52-20d0992aab6a" />
+
 
 ## ✦ Key Observations
 
