@@ -89,7 +89,9 @@ A total of **12 visualizations** were created to explore different aspects of ho
 ### Visualization Gallery
 
 <p align="center"><strong>01 — Monthly Booking Trends</strong></p>
-<p align="center"><img src="images/monthly_booking_trends.png" width="90%" alt="Monthly Booking Trends" /></p>
+<p align="center"><img width="1287" height="558" alt="Monthly Booking Trends" src="https://github.com/user-attachments/assets/1ad2f13d-ceea-4a4c-b6c8-b16f13ecad12" />
+Hotel Type" /></p>
+
 
 <p align="center"><strong>02 — Booking Distribution by Hotel Type</strong></p>
 <p align="center"><img src="images/hotel_distribution.png" width="90%" alt="Booking Distribution by Hotel Type" /></p>
