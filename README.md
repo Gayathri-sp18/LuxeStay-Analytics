@@ -86,7 +86,7 @@ Additional features were created to support deeper analysis:
 
 A total of **12 visualizations** were created to explore different aspects of hotel booking data.
 
-## ✦ Visualization Gallery
+###**Visualization Gallery**
 
 <p align="center"><strong>01 — Monthly Booking Trends</strong></p>
 <p align="center"><img width="1287" height="558" alt="Monthly Booking Trends" src="https://github.com/user-attachments/assets/1ad2f13d-ceea-4a4c-b6c8-b16f13ecad12" />
@@ -188,7 +188,7 @@ LuxeStay-Analytics/
 
 ---
 
-👩‍💻 About the Author
+👩‍💻 **About the Author**
 
 Gayathri S Pillai
 
