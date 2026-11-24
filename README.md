@@ -5,8 +5,10 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-8B1E3F?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Pandas-6D214F?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/Seaborn-B76E79?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Data%20Analysis-9B6A73?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/NumPy-873E5B?style=for-the-badge&logo=numpy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Matplotlib-B76E79?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Seaborn-C06C84?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Plotly-9B6A73?style=for-the-badge&logo=plotly&logoColor=white" />
 </p>
 
 ---
@@ -21,13 +23,14 @@ The analysis aims to uncover meaningful patterns in hotel bookings and present t
 
 ## ✦ Project Objectives
 
-- Analyse booking trends across different hotel types.
-- Understand customer booking behaviour and preferences.
-- Identify cancellation patterns across market segments.
-- Explore seasonal booking trends and demand.
-- Examine Average Daily Rate (ADR) and length of stay.
-- Identify relationships between numerical variables.
-- Present insights through meaningful visualizations.
+- Analyse booking trends across City Hotels and Resort Hotels.
+- Identify factors associated with booking cancellations.
+- Understand customer types and booking preferences.
+- Examine booking patterns across distribution channels and market segments.
+- Explore seasonal demand and monthly booking trends.
+- Analyse Average Daily Rate (ADR) and length of stay.
+- Understand relationships between numerical variables.
+- Present findings through meaningful visualizations.
 
 ## ✦ Dataset
 
@@ -39,6 +42,9 @@ The analysis aims to uncover meaningful patterns in hotel bookings and present t
 - Data period: 2015–2017
 
 The dataset contains information about reservation dates, customer types, booking channels, lead time, length of stay, room preferences, cancellation status and Average Daily Rate (ADR).
+Each row represents a hotel booking record.
+- Records: 87,229
+- Columns: 48
 
 ## ✦ Tools & Technologies
 
@@ -58,15 +64,15 @@ The dataset contains information about reservation dates, customer types, bookin
 The dataset was examined and prepared before performing the analysis.
 
 Key steps included:
-
-- Initial dataset inspection and structure analysis.
-- Standardizing column names and removing whitespace.
-- Identifying and removing exact duplicate records.
-- Handling missing values and undefined categories.
-- Converting date columns into appropriate formats.
-- Validating guest counts, ADR and booking durations.
-- Identifying outliers using the IQR method.
-- Performing business logic and data consistency checks.
+- **Data Inspection:** Examined dataset dimensions, column names, data types, missing values and numerical summaries.
+- **Column Standardization:** Standardized column names using lowercase and underscore formatting.
+- **Duplicate Removal:** Identified and removed exact duplicate records.
+- **Data Type Conversion:** Converted reservation status dates and constructed arrival dates using year, month and day information.
+- **Missing Value Handling:** Handled missing values in children, country, agent and company columns while preserving missingness indicators for agent and company.
+- **Category Standardization:** Replaced undefined values in selected categorical columns with Unknown.
+- **Data Validation:** Checked guest counts, negative values, booking durations and ADR.
+- **Invalid Record Removal:** Removed records containing zero total guests, negative ADR or invalid negative counts and durations.
+- **Outlier Detection:** Applied the Interquartile Range (IQR) method to identify outliers in ADR, lead time, weekend nights and weekday nights. Outliers were flagged rather than automatically removed.
 
 ## ✦ Feature Engineering
 
@@ -74,6 +80,7 @@ Additional features were created to support deeper analysis:
 
 - `total_guests` – Total number of guests.
 - `total_nights` – Total length of stay.
+- `arrival_month_num`-	Numerical representation of arrival month.
 - `arrival_date` – Combined arrival date.
 - `arrival_quarter` – Quarter of arrival.
 - `arrival_day_of_week` – Day of arrival.
@@ -81,6 +88,8 @@ Additional features were created to support deeper analysis:
 - `has_children_or_babies` – Indicates bookings with children or babies.
 - `room_changed` – Identifies room changes.
 - `revenue_proxy` – Approximate revenue indicator calculated using ADR × total nights.
+- `agent_was_missing` - Indicates originally missing agent values.
+- `company_was_missing` - Indicates originally missing company values.
 
 ## ✦ Exploratory Data Analysis & Visualizations
 
@@ -134,25 +143,45 @@ A total of **12 visualizations** were created to explore different aspects of ho
 <p align="center"><strong>12 — Correlation Analysis</strong></p>
 <p align="center"><img width="771" height="570" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/5ea83f13-3b9d-4b88-8a52-20d0992aab6a" />
 
+## ✦ Key Insights
 
-## ✦ Key Observations
+The exploratory analysis revealed the following findings:
 
-- **Hotel Booking Distribution:** City Hotels accounted for approximately 61.1% of bookings, while Resort Hotels accounted for 38.9%.
-- **Cancellation Trends:** City Hotels recorded a higher cancellation rate (30.10%) compared with Resort Hotels (23.48%).
+- **Hotel Booking Distribution:** City Hotels accounted for 53,274 bookings (61.1%), while Resort Hotels accounted for 33,955 bookings (38.9%).
+- **Cancellation Trends:** City Hotels recorded a cancellation rate of approximately 30.10%, compared with 23.48% for Resort Hotels.
 - **Market Segment:** Online Travel Agents recorded the highest cancellation rate among the major market segments, at approximately 35.38%.
-- **Distribution Channels:** Travel Agents and Tour Operators contributed approximately 79.1% of bookings.
-- **ADR Comparison:** City Hotels had a higher median ADR of 105.30 compared with Resort Hotels at 79.50.
-- **Length of Stay:** Resort Hotel guests stayed longer on average than City Hotel guests.
-- **Country-wise Bookings:** Portugal recorded the highest number of bookings among the countries represented.
-- **Customer Type:** Transient customers formed the largest customer category for both hotel types.
-- **Correlation:** Lead time showed a positive correlation with cancellations, although the relationship was relatively weak.
+- **Distribution Channels:** Travel Agents and Tour Operators contributed 69,028 bookings, representing approximately 79.1% of bookings.
+- **ADR Comparison:** City Hotels had a higher median ADR of 105.30 compared with 79.50 for Resort Hotels.
+- **Length of Stay:** Resort Hotel guests generally stayed longer, with an average of 4.42 nights compared with 3.15 nights for City Hotels, considering stays between 1 and 30 nights.
+- **Country-wise Bookings:** Portugal recorded the highest number of bookings, with 27,355.
+- **Customer Type:** Transient customers represented the largest customer category for both hotel types.
+- **Correlation Analysis:** Lead time showed the strongest positive correlation with cancellations among the selected numerical variables, at approximately 0.18.
 
-## ✦ Analytical Considerations
+## ✦ Business Recommendations
 
-- Outliers were identified using the IQR method and flagged rather than automatically removed.
-- The `revenue_proxy` feature represents an approximation and not a verified final booking payment.
-- A random sample of 5,000 records was used for the Lead Time vs ADR scatter plot to improve visualization.
-- Correlation indicates association and does not establish causation.
+Based on the findings, the following recommendations can be considered:
+
+- Improve Cancellation Management: City Hotels should review their cancellation patterns and consider suitable measures to reduce cancellations.
+
+- Monitor Online Travel Agents: Hotels can monitor cancellation behaviour among Online TA bookings and evaluate ways to encourage confirmed stays.
+
+- Strengthen Direct Bookings: Hotels can explore opportunities to increase direct bookings while continuing to monitor the contribution of travel agents and tour operators.
+
+- Develop Pricing Strategies: City and Resort Hotels can consider their differences in ADR and booking patterns when planning room rates.
+
+- Plan Services Based on Stay Duration: Resort Hotels can consider longer guest stays when designing services and packages.
+
+## ✦ Limitations & Considerations
+
+- The dataset covers July–December 2015, all of 2016 and January–August 2017. Therefore, 2015 and 2017 are incomplete calendar years.
+- Outliers were identified and flagged using the IQR method rather than automatically removed.
+- Some visualizations use restricted ranges or samples for better readability.
+- The ADR histogram focuses on values between 0 and 300.
+- The length-of-stay visualization focuses on stays between 1 and 30 nights.
+- The Lead Time vs ADR scatter plot uses a random sample of up to 5,000 records.
+- Unknown categories with very small booking counts should be interpreted carefully.
+- revenue_proxy is an approximation, not verified realized revenue or the final amount paid by customers.
+
 
 ## ✦ Repository Structure
 
