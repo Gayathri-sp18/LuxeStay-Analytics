@@ -51,7 +51,7 @@ The dataset contains information about reservation dates, customer types, bookin
 | Seaborn | Statistical visualization |
 | Plotly Express | Interactive visualizations |
 | Squarify | Treemap visualization |
-| Google Colab | Development environment |
+| Jupyter notebook | Development environment |
 
 ## ✦ Data Cleaning & Preprocessing
 
